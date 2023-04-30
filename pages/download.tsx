@@ -23,14 +23,14 @@ export default function Download() {
             </Head>
             <Header />
             <main className={`${inter.className} container mx-auto max-w-5xl`}>
-                <Hero title="Rejoindre l'aventure" />
+                <Hero title="Rejoindre l&apos;aventure" />
                 <div className="bg-[#755938] rounded-none xl:rounded-2xl mt-0 xl:mt-4 overflow-hidden">
                     <div className="flex flex-col md:flex-row h-full items-center justify-between px-6 lg:px-8 py-12 bg-gradient-to-r from-[#664C32] to-[#755938]">
                         <div className="w-full md:w-1/2 max-w-[464px] md:max-w-none">
                             <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Téléchargement</h1>
                             <p className="mt-6">
                                 Notre Launcher est actuellement disponible sur Windows et Linux, une version Mac sera prochainement disponible.<br />
-                                Pour plus d'informations et en cas de problème, rejoignez-nous sur Discord.
+                                Pour plus d&apos;informations et en cas de problème, rejoignez-nous sur Discord.
                             </p>
                             <div className="mt-8 space-x-2 md:space-x-4 flex justify-center w-full">
                                 <Link

@@ -34,7 +34,7 @@ export default function Home() {
                             <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Tenez-vous au courant</h1>
                             <p className="mt-6">
                                 Nous communiquons majoritairement sur Discord et Twitter.
-                                N'hésitez pas à vous tenir au courant des futures Alpha/Beta, à poser des questions à l'équipe ou participer dans la communauté.
+                                N&apos;hésitez pas à vous tenir au courant des futures Alpha/Beta, à poser des questions à l&apos;équipe ou participer dans la communauté.
                             </p>
                             <div className="mt-8 space-x-2 md:space-x-4 w-full">
                                 <Link
@@ -88,8 +88,8 @@ export default function Home() {
                         <div className="w-full md:w-1/2 max-w-[464px] md:max-w-none">
                             <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Rejoindre l&apos;aventure</h1>
                             <p className="mt-6">
-                                Dés qu'une période de test est annoncée (Alpha ou Beta), vous aurez la possibilité de vous connecter en jeu en passant par notre Launcher.<br />
-                                Vous pouvez télécharger l'Arena Returns Launcher en cliquant ci-dessous.
+                                Dés qu&apos;une période de test est annoncée (Alpha ou Beta), vous aurez la possibilité de vous connecter en jeu en passant par notre Launcher.<br />
+                                Vous pouvez télécharger l&apos;Arena Returns Launcher en cliquant ci-dessous.
                             </p>
                             <div className="mt-8 space-x-2 md:space-x-4 w-full flex">
                                 <Link
