@@ -15,8 +15,8 @@ const rocknRoll = RocknRoll_One({
 const navigation = [
     { name: "Accueil", href: "/", isExternal: false },
     { name: "Télécharger", href: "/download", isExternal: false },
-    { name: "Discord", href: "#", isExternal: true },
-    { name: "Twitter", href: "#", isExternal: true },
+    { name: "Discord", href: "https://discord.gg/arenareturns", isExternal: true },
+    { name: "Twitter", href: "https://twitter.com/ArenaReturns", isExternal: true },
 ];
 
 const lang = [
@@ -46,7 +46,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
                         onClick={() => setMobileMenuOpen(true)}
                     >
-                        <span className="sr-only">Open main menu</span>
+                        <span className="sr-only">Ouvrir le menu</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
@@ -63,7 +63,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                         </Link>
                     ))}
                 </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+                {/*<div className="hidden lg:flex lg:flex-1 lg:justify-end">
                     <Popover className="relative">
                         <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50">
                             Langage
@@ -92,7 +92,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                             </Popover.Panel>
                         </Transition>
                     </Popover>
-                </div>
+                </div>*/}
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-10" />
@@ -122,7 +122,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                                     </Link>
                                 ))}
                             </div>
-                            <Disclosure as="div" className="-mx-3">
+                            {/*<Disclosure as="div" className="-mx-3">
                                 {({ open }) => (
                                     <>
                                         <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-yellow-50 hover:bg-[#755938]">
@@ -143,7 +143,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                                         </Disclosure.Panel>
                                     </>
                                 )}
-                            </Disclosure>
+                            </Disclosure>*/}
                         </div>
                     </div>
                 </Dialog.Panel>

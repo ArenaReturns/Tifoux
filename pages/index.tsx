@@ -17,7 +17,7 @@ export default function Home() {
         <>
             <Head>
                 <title>Arena Returns</title>
-                <meta name="description" content="Arena Returns - Serveur privé Dofus Arena" />
+                <meta name="description" content="Arena Returns - Le re-développement de Dofus Arena par des fans, pour des fans !" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -25,22 +25,21 @@ export default function Home() {
             <main className={`${inter.className} container mx-auto max-w-5xl`}>
                 <Hero title="Arena Returns">
                     <p className="mt-6 max-w-lg text-xl text-gray-200 sm:max-w-3xl">
-                        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-                        aliqua.
+                        Arena Returns est un projet par des fans, pour des fans dont le but est de relancer le jeu Dofus Arena.
                     </p>
                 </Hero>
                 <div className="bg-[#755938] rounded-none xl:rounded-2xl mt-0 xl:mt-4 overflow-hidden">
                     <div className="flex flex-col md:flex-row h-full items-center justify-between px-6 lg:px-8 py-12 bg-gradient-to-r from-[#664C32] to-[#755938]">
                         <div className="w-full md:w-1/2 max-w-[464px] md:max-w-none">
-                            <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Arena Returns</h1>
+                            <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Tenez-vous au courant</h1>
                             <p className="mt-6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in lacus metus. Vestibulum at blandit diam. Aenean ac diam mi.
-                                Quisque ullamcorper condimentum lectus eget placerat. Duis viverra, massa ac maximus posuere, orci nibh convallis ligula, a mi.
+                                Nous communiquons majoritairement sur Discord et Twitter.
+                                N'hésitez pas à vous tenir au courant des futures Alpha/Beta, à poser des questions à l'équipe ou participer dans la communauté.
                             </p>
                             <div className="mt-8 space-x-2 md:space-x-4 w-full">
                                 <Link
                                     className={`${rocknRoll.className} max-w-[156px] items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-[#5865F2] via-[#5865F2] to-[#8791FF] hover:from-[#5865F2] hover:via-[#8791FF] hover:to-[#a0a8ff]`}
-                                    href="#discord"
+                                    href="https://discord.gg/arenareturns"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -58,7 +57,7 @@ export default function Home() {
                                 </Link>
                                 <Link
                                     className={`${rocknRoll.className} max-w-[156px] items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-[#1DA1F2] via-[#1DA1F2] to-[#78CCFF] hover:from-[#1DA1F2] hover:via-[#78CCFF] hover:to-[#8bd3ff]`}
-                                    href="#twitter"
+                                    href="https://twitter.com/ArenaReturns"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -89,8 +88,8 @@ export default function Home() {
                         <div className="w-full md:w-1/2 max-w-[464px] md:max-w-none">
                             <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Rejoindre l&apos;aventure</h1>
                             <p className="mt-6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in lacus metus. Vestibulum at blandit diam. Aenean ac diam mi.
-                                Quisque ullamcorper condimentum lectus eget placerat. Duis viverra, massa ac maximus posuere, orci nibh convallis ligula, a mi.
+                                Dés qu'une période de test est annoncée (Alpha ou Beta), vous aurez la possibilité de vous connecter en jeu en passant par notre Launcher.<br />
+                                Vous pouvez télécharger l'Arena Returns Launcher en cliquant ci-dessous.
                             </p>
                             <div className="mt-8 space-x-2 md:space-x-4 w-full flex">
                                 <Link

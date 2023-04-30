@@ -29,13 +29,13 @@ export default function Download() {
                         <div className="w-full md:w-1/2 max-w-[464px] md:max-w-none">
                             <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Téléchargement</h1>
                             <p className="mt-6">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in lacus metus. Vestibulum at blandit diam. Aenean ac diam mi.
-                                Quisque ullamcorper condimentum lectus eget placerat. Duis viverra, massa ac maximus posuere, orci nibh convallis ligula, a mi.
+                                Notre Launcher est actuellement disponible sur Windows et Linux, une version Mac sera prochainement disponible.<br />
+                                Pour plus d'informations et en cas de problème, rejoignez-nous sur Discord.
                             </p>
                             <div className="mt-8 space-x-2 md:space-x-4 flex justify-center w-full">
                                 <Link
                                     className={`${rocknRoll.className} max-w-full items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-amber-800 via-amber-600 to-amber-600 hover:from-amber-800 hover:via-amber-600 hover:to-amber-500`}
-                                    href="#windows"
+                                    href="https://github.com/ArenaReturns/Launcher/releases/download/v1.1.1/Arena.Returns.Launcher-1.1.1.Setup.exe"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -53,11 +53,11 @@ export default function Download() {
                                 </Link>
                             </div>
                             <div className="flex flex-row gap-x-6 mt-4 justify-center w-full">
-                                <Link href="#" className="text-stone-400 underline text-sm hover:text-stone-200">
+                                <p className="text-stone-500 text-sm">
                                     Client MacOS
-                                </Link>
-                                <Link href="#" className="text-stone-400 underline text-sm hover:text-stone-200">
-                                    Client Linux
+                                </p>
+                                <Link href="https://github.com/ArenaReturns/Launcher/releases/download/v1.1.1/Arena.Returns.Launcher-linux-x64-1.1.1.zip" className="text-stone-400 underline text-sm hover:text-stone-200">
+                                    Client Linux (.zip)
                                 </Link>
                             </div>
                         </div>
