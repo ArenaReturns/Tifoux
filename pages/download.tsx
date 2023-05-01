@@ -30,13 +30,14 @@ export default function Download() {
                             <h1 className={`${rocknRoll.className} text-3xl sm:text-4xl`}>Téléchargement</h1>
                             <p className="mt-6">
                                 Notre Launcher est actuellement disponible sur Windows et Linux, une version Mac sera prochainement disponible.<br />
-                                Pour plus d&apos;informations et en cas de problème, rejoignez-nous sur Discord.
+                                Pour plus d&apos;informations et en cas de problème, rejoignez-nous sur Discord.<br />
+                                <br />
+                                <b>Le téléchargement du Launcher est actuellement désactivé.</b>
                             </p>
                             <div className="mt-8 space-x-2 md:space-x-4 flex justify-center w-full">
                                 <Link
                                     className={`${rocknRoll.className} max-w-full items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-amber-800 via-amber-600 to-amber-600 hover:from-amber-800 hover:via-amber-600 hover:to-amber-500`}
-                                    href="https://github.com/ArenaReturns/Launcher/releases/download/v1.1.1/Arena.Returns.Launcher-1.1.1.Setup.exe"
-                                    target="_blank"
+                                    href="#"
                                     rel="noopener noreferrer"
                                 >
                                     <svg
@@ -56,7 +57,7 @@ export default function Download() {
                                 <p className="text-stone-500 text-sm">
                                     Client MacOS
                                 </p>
-                                <Link href="https://github.com/ArenaReturns/Launcher/releases/download/v1.1.1/Arena.Returns.Launcher-linux-x64-1.1.1.zip" className="text-stone-400 underline text-sm hover:text-stone-200">
+                                <Link href="#" className="text-stone-400 underline text-sm hover:text-stone-200">
                                     Client Linux (.zip)
                                 </Link>
                             </div>
