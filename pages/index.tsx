@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Arena Returns</title>
+        <title>Arena Returns - Le retour de Dofus Arena</title>
         <meta name="description" content="Arena Returns - Le re-développement de Dofus Arena par des fans, pour des fans !" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
