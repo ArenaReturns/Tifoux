@@ -3,14 +3,9 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-import { RocknRoll_One } from "next/font/google";
+import { rocknRollFont } from "@/pages/_app";
 
 interface HeaderProps {}
-
-const rocknRoll = RocknRoll_One({
-  subsets: ["latin"],
-  weight: "400",
-});
 
 const navigation = [
   { name: "Accueil", href: "/", isExternal: false },
@@ -63,7 +58,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             <Link
               key={item.name}
               href={item.href}
-              className={`${rocknRoll.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
+              className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
               target={item.isExternal ? "_blank" : "_self"}
               rel={item.isExternal ? "noopener noreferrer" : undefined}
             >

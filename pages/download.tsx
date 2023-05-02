@@ -1,17 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter, RocknRoll_One } from "next/font/google";
 import { Hero } from "@/components/Hero";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { copperplateFont } from "./_app";
-
-const inter = Inter({ subsets: ["latin"] });
-const rocknRoll = RocknRoll_One({
-  subsets: ["latin"],
-  weight: "400",
-});
+import { copperplateFont, interFont, rocknRollFont } from "./_app";
 
 export default function Download() {
   return (
@@ -23,7 +16,7 @@ export default function Download() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={`${inter.className} container mx-auto max-w-5xl`}>
+      <main className={`${interFont.className} container mx-auto max-w-5xl`}>
         <Hero title="Rejoindre l'aventure" />
         <div className="bg-[#755938] rounded-none xl:rounded-2xl mt-0 xl:mt-4 overflow-hidden">
           <div className="flex flex-col md:flex-row h-full items-center justify-between px-6 lg:px-8 py-12 bg-gradient-to-r from-[#664C32] to-[#755938]">
@@ -39,7 +32,7 @@ export default function Download() {
               </p>
               <div className="mt-8 space-x-2 md:space-x-4 flex justify-center w-full">
                 <Link
-                  className={`${rocknRoll.className} max-w-full items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-amber-800 via-amber-600 to-amber-600 hover:from-amber-800 hover:via-amber-600 hover:to-amber-500`}
+                  className={`${rocknRollFont.className} max-w-full items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-amber-800 via-amber-600 to-amber-600 hover:from-amber-800 hover:via-amber-600 hover:to-amber-500`}
                   href="#"
                   rel="noopener noreferrer"
                 >

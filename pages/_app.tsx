@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import localFont from "next/font/local";
+import { Inter, RocknRoll_One } from "next/font/google";
 
 export const copperplateFont = localFont({
   src: [
@@ -26,6 +27,13 @@ export const copperplateFont = localFont({
     },
   ],
 });
+
+export const rocknRollFont = RocknRoll_One({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const interFont = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;

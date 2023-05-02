@@ -1,17 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter, RocknRoll_One } from "next/font/google";
 import { Hero } from "@/components/Hero";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { copperplateFont } from "./_app";
-
-const inter = Inter({ subsets: ["latin"] });
-const rocknRoll = RocknRoll_One({
-  subsets: ["latin"],
-  weight: "400",
-});
+import { copperplateFont, interFont, rocknRollFont } from "./_app";
 
 export default function Home() {
   return (
@@ -23,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className={`${inter.className} container mx-auto max-w-5xl`}>
+      <main className={`${interFont.className} container mx-auto max-w-5xl`}>
         <Hero title="Arena Returns">
           <p className="mt-6 max-w-lg text-xl text-gray-200 sm:max-w-3xl">
             Arena Returns est un projet par des fans, pour des fans dont le but est de relancer le jeu Dofus Arena.
@@ -39,7 +32,7 @@ export default function Home() {
               </p>
               <div className="mt-8 space-x-2 md:space-x-4 w-full">
                 <Link
-                  className={`${rocknRoll.className} max-w-[156px] items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-[#5865F2] via-[#5865F2] to-[#8791FF] hover:from-[#5865F2] hover:via-[#8791FF] hover:to-[#a0a8ff]`}
+                  className={`${rocknRollFont.className} max-w-[156px] items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-[#5865F2] via-[#5865F2] to-[#8791FF] hover:from-[#5865F2] hover:via-[#8791FF] hover:to-[#a0a8ff]`}
                   href="https://discord.gg/arenareturns"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -51,7 +44,7 @@ export default function Home() {
                   <span>Discord</span>
                 </Link>
                 <Link
-                  className={`${rocknRoll.className} max-w-[156px] items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-[#1DA1F2] via-[#1DA1F2] to-[#78CCFF] hover:from-[#1DA1F2] hover:via-[#78CCFF] hover:to-[#8bd3ff]`}
+                  className={`${rocknRollFont.className} max-w-[156px] items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-[#1DA1F2] via-[#1DA1F2] to-[#78CCFF] hover:from-[#1DA1F2] hover:via-[#78CCFF] hover:to-[#8bd3ff]`}
                   href="https://twitter.com/ArenaReturns"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -84,7 +77,7 @@ export default function Home() {
               </p>
               <div className="mt-8 space-x-2 md:space-x-4 w-full flex">
                 <Link
-                  className={`${rocknRoll.className} items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-amber-800 via-amber-600 to-amber-600 hover:from-amber-800 hover:via-amber-600 hover:to-amber-500`}
+                  className={`${rocknRollFont.className} items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-amber-800 via-amber-600 to-amber-600 hover:from-amber-800 hover:via-amber-600 hover:to-amber-500`}
                   href="/download"
                 >
                   <span>Télécharger le jeu</span>
