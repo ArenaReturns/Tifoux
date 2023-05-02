@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-        @apply bg-[#372820] text-white
-    }
+  body {
+    @apply bg-[#372820] text-white;
+  }
 }
