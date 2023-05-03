@@ -47,14 +47,13 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 
   return (
     <header className="bg-[#372820]">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div className="flex lg:flex-1 z-10">
-          <Link href="/" className="lg:-my-8 lg:translate-y-6 hover:scale-110 hover:-rotate-3 duration-500 transition-all">
-            <span className="sr-only">Arena Returns</span>
-            <Image className="hidden lg:block h-8 lg:h-28 w-auto" src="/logo.png" alt="" width={202} height={128} />
-            <Image className="lg:hidden h-10 w-auto" src="/icon.png" alt="" width={202} height={128} />
-          </Link>
-        </div>
+      <nav className="mx-auto flex max-w-5xl items-center justify-center p-6 lg:px-8" aria-label="Global">
+        {/*<div className="flex lg:flex-1 z-10">*/}
+        {/*  <Link href="/" className="lg:-my-8 lg:translate-y-6 hover:scale-110 hover:-rotate-3 duration-500 transition-all">*/}
+        {/*    <span className="sr-only">Arena Returns</span>*/}
+        {/*    <Image className="h-8 lg:h-28 w-auto" src="/logo.png" alt="" width={202} height={128} />*/}
+        {/*  </Link>*/}
+        {/*</div>*/}
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -66,16 +65,25 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-16">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
-              target={item.isExternal ? "_blank" : "_self"}
-              rel={item.isExternal ? "noopener noreferrer" : undefined}
-            >
-              {t(item.name)}
-            </Link>
+          {navigation.map((item, index) => (
+              <React.Fragment key={item.name}>
+                {index === Math.floor(navigation.length / 2) && (
+                    <div className="flex lg:flex-1 z-10">
+                      <Link href="/" className="lg:-my-16 lg:translate-y-6">
+                        <span className="sr-only">Arena Returns</span>
+                        <Image className="h-8 lg:h-32 w-auto" src="/logo.png" alt="" width={202} height={128} />
+                      </Link>
+                    </div>
+                )}
+                <Link
+                    href={item.href}
+                    className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
+                    target={item.isExternal ? "_blank" : "_self"}
+                    rel={item.isExternal ? "noopener noreferrer" : undefined}
+                >
+                  {t(item.name)}
+                </Link>
+              </React.Fragment>
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
