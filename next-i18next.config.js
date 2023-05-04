@@ -7,7 +7,7 @@ module.exports = {
   debug: false,
   i18n: {
     defaultLocale: "fr",
-    locales: ["fr", "en"],
+    locales: ["fr", "en", "es"],
   },
   react: {
     transSupportBasicHtmlNodes: true,
