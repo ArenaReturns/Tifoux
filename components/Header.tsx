@@ -51,7 +51,8 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <div className="flex lg:flex-1 z-10">
           <Link href="/" className="lg:-my-8 lg:translate-y-6 hover:scale-110 hover:-rotate-3 duration-500 transition-all">
             <span className="sr-only">Arena Returns</span>
-            <Image className="h-8 lg:h-28 w-auto" src="/logo.png" alt="" width={202} height={128} />
+            <Image className="hidden lg:block h-8 lg:h-28 w-auto" src="/logo.png" alt="" width={202} height={128} />
+            <Image className="lg:hidden h-10 w-auto" src="/icon.png" alt="" width={202} height={128} />
           </Link>
         </div>
         <div className="flex lg:hidden">
@@ -117,7 +118,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Arena Returns</span>
-              <Image className="h-8 w-auto" src="/logo.png" alt="" width={202} height={128} />
+              <Image className="h-10 w-auto" src="/icon.png" alt="" width={202} height={128} />
             </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-100" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">{t("navbar.mobile.close")}</span>
