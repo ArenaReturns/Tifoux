@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import React, { Fragment, useState } from "react";
+import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { rocknRollFont } from "@/pages/_app";
 import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 interface HeaderProps {}
 
@@ -24,8 +26,9 @@ const navigation = [
 ];
 
 const lang = [
-  { name: "Français", href: "#" },
-  { name: "Anglais", href: "#" },
+  { name: "Français", locale: "fr" },
+  { name: "English", locale: "en" },
+  { name: "Español", locale: "es" },
 ];
 
 function classNames(...classes: string[]) {
@@ -33,9 +36,15 @@ function classNames(...classes: string[]) {
 }
 
 export const Header: React.FC<HeaderProps> = ({}) => {
+  const router = useRouter();
   const { t } = useTranslation("common");
 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const onToggleLanguageClick = (newLocale: string) => {
+    const { pathname, asPath, query } = router;
+    router.push({ pathname, query }, asPath, { locale: newLocale });
+  };
 
   return (
     <header className="bg-[#372820]">
@@ -69,36 +78,36 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             </Link>
           ))}
         </div>
-        {/*<div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                    <Popover className="relative">
-                        <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50">
-                            Langage
-                            <ChevronDownIcon className="h-5 w-5 flex-none text-yellow-50" aria-hidden="true" />
-                        </Popover.Button>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Popover className="relative">
+            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50">
+              <span className="fi fi-fr"></span> <span className="fi fi-gb"></span> <span className="fi fi-es"></span>
+              <ChevronDownIcon className="h-5 w-5 flex-none text-yellow-50" aria-hidden="true" />
+            </Popover.Button>
 
-                        <Transition
-                            as={Fragment}
-                            enter="transition ease-out duration-200"
-                            enterFrom="opacity-0 translate-y-1"
-                            enterTo="opacity-100 translate-y-0"
-                            leave="transition ease-in duration-150"
-                            leaveFrom="opacity-100 translate-y-0"
-                            leaveTo="opacity-0 translate-y-1"
-                        >
-                            <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-[#755938] p-2 shadow-lg ring-1 ring-amber-900/20">
-                                {lang.map((item) => (
-                                    <a
-                                        key={item.name}
-                                        href={item.href}
-                                        className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-yellow-50 hover:bg-amber-900/20"
-                                    >
-                                        {item.name}
-                                    </a>
-                                ))}
-                            </Popover.Panel>
-                        </Transition>
-                    </Popover>
-                </div>*/}
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-200"
+              enterFrom="opacity-0 translate-y-1"
+              enterTo="opacity-100 translate-y-0"
+              leave="transition ease-in duration-150"
+              leaveFrom="opacity-100 translate-y-0"
+              leaveTo="opacity-0 translate-y-1"
+            >
+              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-[#755938] p-2 shadow-lg ring-1 ring-amber-900/20">
+                {lang.map((item) => (
+                  <span
+                    key={item.name}
+                    onClick={() => onToggleLanguageClick(item.locale)}
+                    className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-yellow-50 hover:bg-amber-900/20 hover:cursor-pointer"
+                  >
+                    {item.name}
+                  </span>
+                ))}
+              </Popover.Panel>
+            </Transition>
+          </Popover>
+        </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
@@ -128,28 +137,30 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                   </Link>
                 ))}
               </div>
-              {/*<Disclosure as="div" className="-mx-3">
-                                {({ open }) => (
-                                    <>
-                                        <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-yellow-50 hover:bg-[#755938]">
-                                            Langage
-                                            <ChevronDownIcon className={classNames(open ? "rotate-180" : "", "h-5 w-5 flex-none")} aria-hidden="true" />
-                                        </Disclosure.Button>
-                                        <Disclosure.Panel className="mt-2 space-y-2">
-                                            {lang.map((item) => (
-                                                <Disclosure.Button
-                                                    key={item.name}
-                                                    as="a"
-                                                    href={item.href}
-                                                    className="block rounded-lg py-2 pl-6 pr-3 text-sm font-normal leading-7 text-yellow-50 hover:bg-[#755938]"
-                                                >
-                                                    {item.name}
-                                                </Disclosure.Button>
-                                            ))}
-                                        </Disclosure.Panel>
-                                    </>
-                                )}
-                            </Disclosure>*/}
+              <Disclosure as="div" className="-mx-3">
+                {({ open }) => (
+                  <>
+                    <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-yellow-50 hover:bg-[#755938]">
+                      <span className="flex gap-x-2">
+                        <span className="fi fi-fr"></span> <span className="fi fi-gb"></span> <span className="fi fi-es"></span>
+                      </span>
+                      <ChevronDownIcon className={classNames(open ? "rotate-180" : "", "h-5 w-5 flex-none")} aria-hidden="true" />
+                    </Disclosure.Button>
+                    <Disclosure.Panel className="mt-2 space-y-2">
+                      {lang.map((item) => (
+                        <Disclosure.Button
+                          key={item.name}
+                          as="span"
+                          onClick={() => onToggleLanguageClick(item.locale)}
+                          className="block rounded-lg py-2 pl-6 pr-3 text-sm font-normal leading-7 text-yellow-50 hover:bg-[#755938] hover:cursor-pointer"
+                        >
+                          {item.name}
+                        </Disclosure.Button>
+                      ))}
+                    </Disclosure.Panel>
+                  </>
+                )}
+              </Disclosure>
             </div>
           </div>
         </Dialog.Panel>
