@@ -8,13 +8,13 @@
   },
   "stayInformed": {
     "title": "Tenez-vous au courant",
-    "description": "Nous communiquons majoritairement sur Discord et Twitter. N&apos;hésitez pas à vous tenir au courant des futures Alpha/Beta, à poser des questions à l&apos;équipe ou participer dans la communauté.",
+    "description": "Nous communiquons majoritairement sur Discord et Twitter. N&apos;hésitez pas à vous tenir au courant des futures Alpha/Beta, à poser des questions à 'équipe ou participer dans la communauté.",
     "discord": "Discord",
     "twitter": "Twitter"
   },
   "playNow": {
-    "title": "Rejoindre l&apos;aventure",
-    "description": "Dés qu&apos;une période de test est annoncée (Alpha ou Beta), vous aurez la possibilité de vous connecter en jeu en passant par notre Launcher.<br />Vous pouvez télécharger l&apos;Arena Returns Launcher en cliquant ci-dessous.",
+    "title": "Rejoindre 'aventure",
+    "description": "Dés qu&apos;une période de test est annoncée (Alpha ou Beta), vous aurez la possibilité de vous connecter en jeu en passant par notre Launcher.<br />Vous pouvez télécharger 'Arena Returns Launcher en cliquant ci-dessous.",
     "button": "Télécharger le jeu"
   }
 }
