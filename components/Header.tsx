@@ -23,6 +23,9 @@ const navigation = [
     isExternal: true,
   },
 ];
+const middleNavIndex = Math.ceil(navigation.length / 2);
+const navigationLeft = navigation.splice(0, middleNavIndex);
+const navigationRight = navigation.splice(-middleNavIndex);
 
 const lang = [
   { name: "Français", locale: "fr", flag: "fr" },
@@ -47,14 +50,12 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 
   return (
     <header className="bg-[#372820]">
-      <nav className="mx-auto flex max-w-5xl items-center justify-center p-6 lg:px-8" aria-label="Global">
-        {/*<div className="flex lg:flex-1 z-10">*/}
-        {/*  <Link href="/" className="lg:-my-8 lg:translate-y-6 hover:scale-110 hover:-rotate-3 duration-500 transition-all">*/}
-        {/*    <span className="sr-only">Arena Returns</span>*/}
-        {/*    <Image className="h-8 lg:h-28 w-auto" src="/logo.png" alt="" width={202} height={128} />*/}
-        {/*  </Link>*/}
-        {/*</div>*/}
-        <div className="flex lg:hidden">
+      <nav className="mx-auto flex max-w-5xl items-center justify-end p-4 lg:p-6 lg:px-8" aria-label="Global">
+        <div className="flex lg:hidden items-center justify-between w-full">
+          <Link href="/">
+            <span className="sr-only">Arena Returns</span>
+            <Image className="h-12 w-auto" src="/logo-square.png" alt="" width={202} height={128} />
+          </Link>
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
@@ -64,17 +65,29 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
-        <div className="hidden lg:flex lg:gap-x-16">
-          {navigation.map((item, index) => (
+        <div className="hidden lg:flex lg:gap-x-20 lg:justify-around lg:flex-1">
+          {navigationLeft.map((item) => (
               <React.Fragment key={item.name}>
-                {index === Math.floor(navigation.length / 2) && (
-                    <div className="flex lg:flex-1 z-10">
-                      <Link href="/" className="lg:-my-16 lg:translate-y-6">
-                        <span className="sr-only">Arena Returns</span>
-                        <Image className="h-8 lg:h-32 w-auto" src="/logo.png" alt="" width={202} height={128} />
-                      </Link>
-                    </div>
-                )}
+              <Link
+                href={item.href}
+                className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
+                target={item.isExternal ? "_blank" : "_self"}
+                rel={item.isExternal ? "noopener noreferrer" : undefined}
+              >
+                {item.name.toUpperCase()}
+              </Link>
+            </React.Fragment>
+          ))}
+        </div>
+        <div className="hidden lg:flex lg:z-10">
+          <Link href="/" className="lg:-my-16 lg:translate-y-6">
+            <span className="sr-only">Arena Returns</span>
+            <Image className="h-8 lg:h-32 w-auto" src="/logo.png" alt="" width={202} height={128} />
+          </Link>
+        </div>
+        <div className="hidden lg:flex lg:gap-x-20 justify-around flex-1">
+          {navigationRight.map((item) => (
+            <React.Fragment key={item.name}>
                 <Link
                     href={item.href}
                     className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
@@ -122,11 +135,11 @@ export const Header: React.FC<HeaderProps> = ({}) => {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#372820] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#372820] px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="/" className="-m-1.5 p-1.5">
+            <Link href="/">
               <span className="sr-only">Arena Returns</span>
-              <Image className="h-10 w-auto" src="/icon.png" alt="" width={202} height={128} />
+              <Image className="h-12 w-auto" src="/logo-square.png" alt="" width={202} height={128} />
             </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-100" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">{t("navbar.mobile.close")}</span>
@@ -136,7 +149,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
-                {navigation.map((item) => (
+                {navigationLeft.concat(navigationRight).map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
