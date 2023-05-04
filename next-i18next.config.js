@@ -9,6 +9,11 @@ module.exports = {
     defaultLocale: "fr",
     locales: ["fr", "en", "es"],
   },
+  fallbackLng: {
+    default: ["fr"],
+    pt: ["es"],
+    "pt-BR": ["es"],
+  },
   react: {
     transSupportBasicHtmlNodes: true,
   },
