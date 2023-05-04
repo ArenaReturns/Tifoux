@@ -25,9 +25,9 @@ const navigation = [
 ];
 
 const lang = [
-  { name: "Français", locale: "fr" },
-  { name: "English", locale: "en" },
-  { name: "Español", locale: "es" },
+  { name: "Français", locale: "fr", flag: "fr" },
+  { name: "English", locale: "en", flag: "gb" },
+  { name: "Español", locale: "es", flag: "es" },
 ];
 
 function classNames(...classes: string[]) {
@@ -80,7 +80,9 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50">
-              <span className="fi fi-fr"></span> <span className="fi fi-gb"></span> <span className="fi fi-es"></span>
+              {lang.map((item) => (
+                <span className={`fi fi-${item.flag}`} />
+              ))}
               <ChevronDownIcon className="h-5 w-5 flex-none text-yellow-50" aria-hidden="true" />
             </Popover.Button>
 
@@ -101,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                     onClick={() => onToggleLanguageClick(item.locale)}
                     className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-yellow-50 hover:bg-amber-900/20 hover:cursor-pointer"
                   >
-                    {item.name}
+                    <span className={`fi fi-${item.flag}`} /> {item.name}
                   </Popover.Button>
                 ))}
               </Popover.Panel>
@@ -142,7 +144,9 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                   <>
                     <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-yellow-50 hover:bg-[#755938]">
                       <span className="flex gap-x-2">
-                        <span className="fi fi-fr"></span> <span className="fi fi-gb"></span> <span className="fi fi-es"></span>
+                        {lang.map((item) => (
+                          <span className={`fi fi-${item.flag}`} />
+                        ))}
                       </span>
                       <ChevronDownIcon className={classNames(open ? "rotate-180" : "", "h-5 w-5 flex-none")} aria-hidden="true" />
                     </Disclosure.Button>
@@ -154,7 +158,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                           onClick={() => onToggleLanguageClick(item.locale)}
                           className="block rounded-lg py-2 pl-6 pr-3 text-sm font-normal leading-7 text-yellow-50 hover:bg-[#755938] hover:cursor-pointer"
                         >
-                          {item.name}
+                          <span className={`fi fi-${item.flag}`} /> {item.name}
                         </Disclosure.Button>
                       ))}
                     </Disclosure.Panel>
