@@ -22,7 +22,7 @@ export default function Home() {
       <Header />
       <main className={`${interFont.className} container mx-auto max-w-5xl`}>
         <Hero title="Arena Returns">
-          <p className="mt-6 max-w-lg text-xl text-gray-200 sm:max-w-3xl">{t("hero.description")}</p>
+          <p className="mt-6 max-w-lg text-xl text-gray-200 sm:max-w-3xl text-shadow shadow-black">{t("hero.description")}</p>
         </Hero>
         <div className="bg-[#755938] rounded-none xl:rounded-2xl mt-0 xl:mt-4 overflow-hidden">
           <div className="flex flex-col md:flex-row h-full items-center justify-between px-6 lg:px-8 py-12 bg-gradient-to-r from-[#664C32] to-[#755938]">

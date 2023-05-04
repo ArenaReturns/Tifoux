@@ -18,7 +18,9 @@ export const Hero: React.FC<HeroProps> = ({ title, children }) => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#372820] via-[#37282050] to-transparent" />
           </div>
           <div className="relative py-16 px-6 sm:py-24 lg:py-32 lg:px-8">
-            <h1 className={`${copperplateFont.className} text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl`}>{title}</h1>
+            <h1 className={`${copperplateFont.className} text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-shadow-lg shadow-black`}>
+              {title}
+            </h1>
             {children}
           </div>
         </div>
