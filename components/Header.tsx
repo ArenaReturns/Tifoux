@@ -3,10 +3,9 @@ import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
-import { rocknRollFont } from "@/pages/_app";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import "/node_modules/flag-icons/css/flag-icons.min.css";
+import { rocknRollFont } from "@/utils/fonts";
 
 interface HeaderProps {}
 

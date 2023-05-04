@@ -1,4 +1,4 @@
-import { copperplateFont } from "@/pages/_app";
+import { copperplateFont } from "@/utils/fonts";
 import Image from "next/image";
 import React from "react";
 
