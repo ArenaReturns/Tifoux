@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
+import { appWithTranslation } from "next-i18next";
 import localFont from "next/font/local";
 import { Inter, RocknRoll_One } from "next/font/google";
 
@@ -35,6 +36,6 @@ export const rocknRollFont = RocknRoll_One({
 
 export const interFont = Inter({ subsets: ["latin"] });
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
-}
+const App = ({ Component, pageProps }: AppProps) => <Component {...pageProps} />;
+
+export default appWithTranslation(App);

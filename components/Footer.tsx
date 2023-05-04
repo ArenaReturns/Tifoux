@@ -1,17 +1,14 @@
 import React from "react";
+import { Trans, useTranslation } from "next-i18next";
 
-interface FooterProps {}
+export const Footer = () => {
+  const { t } = useTranslation("common");
 
-export const Footer: React.FC<FooterProps> = ({}) => {
   return (
     <footer>
       <div className="mx-auto overflow-hidden py-8 px-6 sm:py-10 lg:px-8">
         <p className="mt-8 text-center text-xs leading-5 text-gray-100 text-opacity-50">
-          Copyright &copy; 2021 - 2023 Arena Returns.
-          <br />
-          Arena Returns est un serveur non-officiel sous l&apos;autorisation d&apos;Ankama.
-          <br />
-          Certaines images sont la propriété d&apos;Ankama - Tous droits réservés.
+          <Trans t={t} i18nKey="footer" />
         </p>
       </div>
     </footer>

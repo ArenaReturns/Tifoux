@@ -11,9 +11,12 @@
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^2.0.17",
+    "i18next": "^22.4.15",
     "next": "13.3.4",
+    "next-i18next": "^13.2.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.2.2"
   },
   "devDependencies": {
     "@types/node": "18.16.3",

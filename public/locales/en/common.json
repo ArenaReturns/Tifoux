@@ -1,0 +1,15 @@
+{
+  "navbar": {
+    "mobile": {
+      "open": "Menu",
+      "close": "Close"
+    },
+    "links": {
+      "index": "Home",
+      "download": "Download",
+      "discord": "Discord",
+      "twitter": "Twitter"
+    }
+  },
+  "footer": "Copyright © 2021 - 2023 Arena Returns.<br />Arena Returns is an unofficial server under the permission of Ankama.<br />Some images are the property of Ankama - All rights reserved."
+}

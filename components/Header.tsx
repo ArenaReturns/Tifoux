@@ -4,19 +4,20 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { rocknRollFont } from "@/pages/_app";
+import { useTranslation } from "next-i18next";
 
 interface HeaderProps {}
 
 const navigation = [
-  { name: "Accueil", href: "/", isExternal: false },
-  { name: "Télécharger", href: "/download", isExternal: false },
+  { name: "navbar.links.index", href: "/", isExternal: false },
+  { name: "navbar.links.download", href: "/download", isExternal: false },
   {
-    name: "Discord",
+    name: "navbar.links.discord",
     href: "https://discord.gg/arenareturns",
     isExternal: true,
   },
   {
-    name: "Twitter",
+    name: "navbar.links.twitter",
     href: "https://twitter.com/ArenaReturns",
     isExternal: true,
   },
@@ -32,6 +33,8 @@ function classNames(...classes: string[]) {
 }
 
 export const Header: React.FC<HeaderProps> = ({}) => {
+  const { t } = useTranslation("common");
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -49,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-100"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <span className="sr-only">Menu</span>
+            <span className="sr-only">{t("navbar.mobile.open")}</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
         </div>
@@ -62,7 +65,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
               target={item.isExternal ? "_blank" : "_self"}
               rel={item.isExternal ? "noopener noreferrer" : undefined}
             >
-              {item.name}
+              {t(item.name)}
             </Link>
           ))}
         </div>
@@ -106,7 +109,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
               <Image className="h-8 w-auto" src="/logo.png" alt="" width={202} height={128} />
             </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-100" onClick={() => setMobileMenuOpen(false)}>
-              <span className="sr-only">Fermer</span>
+              <span className="sr-only">{t("navbar.mobile.close")}</span>
               <XMarkIcon className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
@@ -121,7 +124,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                     target={item.isExternal ? "_blank" : "_self"}
                     rel={item.isExternal ? "noopener noreferrer" : undefined}
                   >
-                    {item.name}
+                    {t(item.name)}
                   </Link>
                 ))}
               </div>

@@ -5,30 +5,29 @@ import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { copperplateFont, interFont, rocknRollFont } from "./_app";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Trans, useTranslation } from "next-i18next";
 
 export default function Download() {
+  const { t } = useTranslation("download");
+
   return (
     <>
       <Head>
-        <title>Arena Returns - Téléchargement</title>
-        <meta name="description" content="Arena Returns - Serveur privé Dofus Arena" />
+        <title>{`Arena Returns - ${t("html.title")}`}</title>
+        <meta name="description" content={`Arena Returns - ${t("html.description")}`} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
       <main className={`${interFont.className} container mx-auto max-w-5xl`}>
-        <Hero title="Rejoindre l'aventure" />
+        <Hero title={t("hero.title")} />
         <div className="bg-[#755938] rounded-none xl:rounded-2xl mt-0 xl:mt-4 overflow-hidden">
           <div className="flex flex-col md:flex-row h-full items-center justify-between px-6 lg:px-8 py-12 bg-gradient-to-r from-[#664C32] to-[#755938]">
             <div className="w-full md:w-1/2 max-w-[464px] md:max-w-none">
-              <h1 className={`${copperplateFont.className} font-bold text-3xl sm:text-4xl`}>Téléchargement</h1>
+              <h1 className={`${copperplateFont.className} font-bold text-3xl sm:text-4xl`}>{t("download.title")}</h1>
               <p className="mt-6">
-                Notre Launcher est actuellement disponible sur Windows et Linux, une version Mac sera prochainement disponible.
-                <br />
-                Pour plus d&apos;informations et en cas de problème, rejoignez-nous sur Discord.
-                <br />
-                <br />
-                <b>Le téléchargement du Launcher est actuellement désactivé.</b>
+                <Trans t={t} i18nKey="download.description" />
               </p>
               <div className="mt-8 space-x-2 md:space-x-4 flex justify-center w-full">
                 <Link
@@ -40,13 +39,13 @@ export default function Download() {
                     <title>Windows</title>
                     <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
                   </svg>
-                  <span>Télécharger pour Windows</span>
+                  <span>{t("download.windows")}</span>
                 </Link>
               </div>
               <div className="flex flex-row gap-x-6 mt-4 justify-center w-full">
-                <p className="text-stone-500 text-sm">Client MacOS</p>
+                <p className="text-stone-500 text-sm">{t("download.macos")}</p>
                 <Link href="#" className="text-stone-400 underline text-sm hover:text-stone-200">
-                  Client Linux (.zip)
+                  {t("download.linux")}
                 </Link>
               </div>
             </div>
@@ -63,4 +62,12 @@ export default function Download() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "download"])),
+    },
+  };
 }
