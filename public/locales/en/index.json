@@ -1,0 +1,20 @@
+{
+  "html": {
+    "title": "The return of Dofus Arena",
+    "description": "The redevelopment of Dofus Arena by fans, for fans!"
+  },
+  "hero": {
+    "description": "Arena Returns is a project by fans, for fans whose goal is to relaunch Dofus Arena."
+  },
+  "stayInformed": {
+    "title": "Stay informed",
+    "description": "We communicate mostly on Discord and Twitter. Feel free to keep up to date with future Alpha/Beta's, ask questions to the team or participate in the community.",
+    "discord": "Discord",
+    "twitter": "Twitter"
+  },
+  "playNow": {
+    "title": "Join the adventure",
+    "description": "As soon as a test period is announced (Alpha or Beta), you will be able to log into the game through our Launcher.<br />You can download the Arena Returns Launcher by clicking below.",
+    "button": "Download the game"
+  }
+}

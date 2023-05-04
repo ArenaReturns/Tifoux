@@ -1,0 +1,16 @@
+{
+  "html": {
+    "title": "Descarga",
+    "description": "¡La remodelación de Dofus Arena por los fans, para los fans!"
+  },
+  "hero": {
+    "title": "Participa en la aventura"
+  },
+  "download": {
+    "title": "Descargar",
+    "description": "Nuestro Launcher está actualmente disponible en Windows y Linux, una versión para Mac estará disponible en breve.<br />Para más información y en caso de problemas, únete a nosotros en Discord.<br /><br /><strong>La descarga del Launcher está actualmente desactivada.</strong>",
+    "windows": "Descargar para Windows",
+    "macos": "Cliente MacOS",
+    "linux": "Cliente Linux (.zip)"
+  }
+}
