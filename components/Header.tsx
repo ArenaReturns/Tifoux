@@ -81,7 +81,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50">
               {lang.map((item) => (
-                <span className={`fi fi-${item.flag}`} />
+                <span key={item.name} className={`fi fi-${item.flag}`} />
               ))}
               <ChevronDownIcon className="h-5 w-5 flex-none text-yellow-50" aria-hidden="true" />
             </Popover.Button>
@@ -145,7 +145,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                     <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-yellow-50 hover:bg-[#755938]">
                       <span className="flex gap-x-2">
                         {lang.map((item) => (
-                          <span className={`fi fi-${item.flag}`} />
+                          <span key={item.name} className={`fi fi-${item.flag}`} />
                         ))}
                       </span>
                       <ChevronDownIcon className={classNames(open ? "rotate-180" : "", "h-5 w-5 flex-none")} aria-hidden="true" />
