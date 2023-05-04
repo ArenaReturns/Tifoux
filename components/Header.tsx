@@ -95,13 +95,14 @@ export const Header: React.FC<HeaderProps> = ({}) => {
             >
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-[#755938] p-2 shadow-lg ring-1 ring-amber-900/20">
                 {lang.map((item) => (
-                  <span
+                  <Popover.Button
                     key={item.name}
+                    as="span"
                     onClick={() => onToggleLanguageClick(item.locale)}
                     className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-yellow-50 hover:bg-amber-900/20 hover:cursor-pointer"
                   >
                     {item.name}
-                  </span>
+                  </Popover.Button>
                 ))}
               </Popover.Panel>
             </Transition>
