@@ -12,6 +12,7 @@ interface HeaderProps {}
 const navigation = [
   { name: "navbar.links.index", href: "/", isExternal: false },
   { name: "navbar.links.download", href: "/download", isExternal: false },
+  { name: "navbar.links.faq", href: "/faq", isExternal: false },
   {
     name: "navbar.links.discord",
     href: "https://discord.gg/arenareturns",
@@ -20,6 +21,11 @@ const navigation = [
   {
     name: "navbar.links.twitter",
     href: "https://twitter.com/ArenaReturns",
+    isExternal: true,
+  },
+  {
+    name: "navbar.links.github",
+    href: "https://github.com/ArenaReturns",
     isExternal: true,
   },
 ];
@@ -50,7 +56,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
 
   return (
     <header className="bg-[#372820]">
-      <nav className="mx-auto flex max-w-5xl items-center justify-end p-4 lg:p-6 lg:px-8" aria-label="Global">
+      <nav className="mt-3 mx-auto flex max-w-5xl items-center justify-center p-4 lg:p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:hidden items-center justify-between w-full">
           <Link href="/">
             <span className="sr-only">Arena Returns</span>
@@ -74,12 +80,12 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                 target={item.isExternal ? "_blank" : "_self"}
                 rel={item.isExternal ? "noopener noreferrer" : undefined}
               >
-                {item.name.toUpperCase()}
+                {t(item.name)}
               </Link>
             </React.Fragment>
           ))}
         </div>
-        <div className="hidden lg:flex lg:z-10">
+        <div className="hidden lg:flex lg:z-10 shrink-0">
           <Link href="/" className="lg:-my-16 lg:translate-y-6">
             <span className="sr-only">Arena Returns</span>
             <Image className="h-8 lg:h-32 w-auto" src="/logo.png" alt="" width={202} height={128} />
@@ -99,8 +105,8 @@ export const Header: React.FC<HeaderProps> = ({}) => {
               </React.Fragment>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Popover className="relative">
+        <div className="lg:block hidden absolute top-3 right-0 z-50">
+          <Popover className="fixed right-3">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50">
               {lang.map((item) => (
                 <span key={item.name} className={`fi fi-${item.flag}`} />
@@ -117,7 +123,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-56 rounded-xl bg-[#755938] p-2 shadow-lg ring-1 ring-amber-900/20">
+              <Popover.Panel className="absolute -left-12 top-full z-10 mt-3 w-56 rounded-xl bg-[#755938] p-2 shadow-lg ring-1 ring-amber-900/20">
                 {lang.map((item) => (
                   <Popover.Button
                     key={item.name}

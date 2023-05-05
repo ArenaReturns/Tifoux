@@ -7,8 +7,10 @@
     "links": {
       "index": "Home",
       "download": "Download",
+      "faq": "Q&A",
       "discord": "Discord",
-      "twitter": "Twitter"
+      "twitter": "Twitter",
+      "github": "Github"
     }
   },
   "footer": "Copyright © 2021 - 2023 Arena Returns.<br />Arena Returns is an unofficial server under the permission of Ankama.<br />Some images are the property of Ankama - All rights reserved."
