@@ -9,8 +9,10 @@
   "download": {
     "title": "Téléchargement",
     "description": "Notre Launcher est actuellement disponible sur Windows et Linux, une version Mac sera prochainement disponible.<br />Pour plus d'informations et en cas de problème, rejoignez-nous sur Discord.<br /><br /><strong>Le téléchargement du Launcher est actuellement désactivé.</strong>",
-    "windows": "Télécharger pour Windows",
+    "for": "Télécharger pour",
+    "windows": "Client Windows",
     "macos": "Client MacOS",
-    "linux": "Client Linux (.zip)"
+    "linux": "Client Linux (zip)",
+    "comingSoon": "Bientôt disponible !"
   }
 }
