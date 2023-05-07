@@ -8,11 +8,11 @@
   },
   "download": {
     "title": "Descargar",
-    "description": "Nuestro Launcher está actualmente disponible en Windows y Linux, una versión para Mac estará disponible en breve.<br />Para más información y en caso de problemas, únete a nosotros en Discord.<br /><br /><strong>La descarga del Launcher está actualmente desactivada.</strong>",
+    "description": "Nuestro Launcher está actualmente disponible en Windows y Linux, una versión para Mac estará disponible en breve.<br />Para más información y en caso de problemas, únete a nosotros en Discord.",
     "for": "Descargar para",
     "windows": "Cliente Windows",
     "macos": "Cliente MacOS",
-    "linux": "Cliente Linux (zip)",
+    "linux": "Cliente Linux (AppImage)",
     "comingSoon": "Muy pronto !"
   }
 }
