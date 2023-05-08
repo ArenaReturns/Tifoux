@@ -1,12 +1,11 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Hero } from "@/components/Hero";
-import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Trans, useTranslation } from "next-i18next";
-import { copperplateFont, interFont, rocknRollFont } from "@/utils/fonts";
+import { copperplateFont, interFont } from "@/utils/fonts";
 import dynamic from "next/dynamic";
 
 export default function Download() {

@@ -5,7 +5,42 @@
   "hero": {
     "title": "Preguntas frecuentes"
   },
-  "noQuestion": "No hay preguntas todavía, ¡pregunta en discord!",
   "faq": {
+    "q1": {
+      "q": "¿Qué es Arena Returns?",
+      "a": "Arena Returns es un proyecto iniciado por los fans de Dofus Arena.<br />Somos, probablemente como usted, tristes por el cierre de Dofus Arena en 2014, por lo que reunimos a personas de todos los ámbitos de la vida (jugadores, desarrolladores, ...) para poder relanzar Dofus Arena."
+    },
+    "q2": {
+      "q": "¿Cómo planean hacer funcionar un juego cerrado nuevamente?",
+      "a": "Actualmente tenemos la última versión del cliente de juego antes de que se detuviera su desarrollo.<br />El principio es simple: utilizamos nuestro conocimiento de ingeniería inversa y desarrollo para reconstruir el servidor de juego a partir de su cliente.<br />Esta es una tarea difícil, pero factible."
+    },
+    "q3": {
+      "q": "¿Es legal?",
+      "a": "Después de discutirlo con Ankama, estamos oficialmente autorizados a llevar a cabo este proyecto con la condición de que siga siendo totalmente gratuito y sin fines de lucro."
+    },
+    "q4": {
+      "q": "¿Quién está detrás del proyecto?",
+      "a": "Actualmente, hay 5 desarrolladores, 1 diseñador gráfico, 1 Community Manager y 1 moderador detrás del proyecto."
+    },
+    "q5": {
+      "q": "¿Cuál es el estado actual del proyecto?",
+      "a": "El proyecto está en <strong>desarrollo</strong>. Eso significa que por ahora, el juego no está listo."
+    },
+    "q6": {
+      "q": "He oído hablar de alfas, ¿cuándo es?",
+      "a": "Ya ha habido dos alfas del proyecto Arena Returns.<br />Estas alfas nos permitieron verificar que nuestras bases de código eran lo suficientemente sólidas y eficientes como para manejar a todos los jugadores presentes.<br />Estas alfas también nos permiten presentar a la comunidad las nuevas características implementadas.<br />Anunciamos las alfas tan pronto como sea posible, a menudo más de una semana antes de que comience la alfa.<br />Por ahora, no hemos avanzado lo suficiente en el juego como para ofrecerles una nueva alfa."
+    },
+    "q7": {
+      "q": "¿Una fecha de lanzamiento? ¿Una beta planificada?",
+      "a": "No tenemos ninguna estimación para darles en este momento, esto sigue siendo un proyecto grande ya que el cliente de juego está encriptado y el juego utiliza formatos de archivo propietarios que requieren cierto trabajo para escribir las herramientas para descifrarlos.<br />Cuando llegue el momento o cuando necesitemos que los jugadores prueben, les mantendremos informados."
+    },
+    "q8": {
+      "q": "¿Cómo participar y ayudar al desarrollo del servidor?",
+      "a": "Esta es una pregunta que surge con frecuencia, y la respuesta es relativamente simple:<br /><br />- Hablar con personas interesadas al respecto.<br />- Tener cuidado de no \"sobrevalorar\" el proyecto. El servidor no estará en línea mañana, ni siquiera en 1 o 2 meses. Es un proyecto a largo plazo, y no queremos que los recién llegados se decepcionen al ver que el proyecto no está a punto de lanzarse.<br /><br />Algunos pueden haber notado, pero la línea \"ayúdanos a desarrollar el código del servidor\" no está presente arriba. Se nos ha preguntado varias veces cómo ayudar con el código, y desafortunadamente la respuesta por ahora es \"no se puede\". La razón principal de esto es que el juego Dofus-Arena (o Arena Confrontation) está muy estrechamente ligado a la comunidad de Dofus. Los desarrolladores del proyecto Arena Returns han estado interactuando con la comunidad de emulación de Dofus durante varios años, y una cosa está relativamente clara: si algún día incluso un código incompleto del servidor de Arena se filtrara públicamente, veríamos un ejército de aprovechadores que recuperaría este código e intentaría monetizarlo tanto como sea posible, lo que plantea varios problemas:<br /><br />- El equipo no quiere que personas sin escrúpulos se beneficien de las cientos (¿miles?) de horas que habrán sido necesarias para el desarrollo del servidor.<br />- Nuestro objetivo es ofrecer un servidor gratuito y abierto de Arena Confrontation, para jugadores nostálgicos (incluyéndonos a nosotros), para poder volver a jugar este juego que nos ha marcado tanto.<br />- La aparición de servidores monetizados podría darle a Ankama una razón para pedirnos que detengamos el proyecto.<br /><br />La única solución que hemos encontrado para evitar los puntos anteriores es compartir el código del servidor solo con personas de confianza, de ahí nuestra dificultad para integrar nuevos desarrolladores en el equipo.<br /><br /><strong>Sin embargo</strong>, puedes ayudarnos con todos nuestros proyectos de código abierto encontrando errores o sugiriendo mejoras. Encontrarás todos nuestros proyectos de código abierto en GitHub: https://github.com/ArenaReturns"
+    },
+    "q9": {
+      "q": "¿Un alfa? ¿Luchando? ¿Dónde?!!",
+      "a": "He oído hablar de un alfa, ¿eso significa que puedo luchar en la arena? ¿Cómo puedo hacerlo?<br />De hecho, hubo dos alfas que nos permitieron probar el código del servidor y verificar que podía manejar la carga de varios docenas de jugadores simultáneamente. Desafortunadamente, estos alfas ya terminaron y el servidor está cerrado nuevamente hasta nuevo aviso. Además, las batallas aún no están implementadas en el servidor.<br />Pero... veo videos en YouTube de personas luchando, yo también quiero luchar...<br />En realidad hay una manera de luchar PERO:<br /><br />1. Es un software desarrollado completamente por un fan fuera del equipo de Arena Returns.<br />2. Hasta ahora, el equipo de Arena Returns tolera el software, pero no verificamos su seguridad. Usted instala este software bajo su propio riesgo.<br /><br />Puede encontrar información sobre este software en Discord. Si desea jugar contra alguien en quien confíe, puede seguir el tutorial. La última versión del software se puede descargar en Discord. Finalmente, si tiene alguna pregunta, vaya a Discord."
+    }
   }
 }
