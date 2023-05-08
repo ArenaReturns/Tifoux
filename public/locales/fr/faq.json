@@ -6,7 +6,6 @@
   "hero": {
     "title": "Foire aux questions"
   },
-  "noQuestion": "Pas encore de question, posez-en sur le discord !",
   "faq": {
     "q1": {
       "q": "Arena Returns, c'est quoi ?",
@@ -14,7 +13,7 @@
     },
     "q2": {
       "q": "Comment comptez vous faire remarcher un jeu fermé ?",
-      "a": "Nous avons actuellement la dernière version du client de jeu avant l'arrêt de son développement.<br />Le principe est simple : Nous utilisons nos connaissances en ingénierie inversée et en développement pour reconstruire le serveur du jeu à partir de son client.<br />C'est une tâche hardue, mais réalisable."
+      "a": "Nous avons actuellement la dernière version du client de jeu avant l'arrêt de son développement.<br />Le principe est simple : Nous utilisons nos connaissances en ingénierie inversée et en développement pour reconstruire le serveur du jeu à partir de son client.<br />C'est une tâche ardue, mais réalisable."
     },
     "q3": {
       "q": "Est-ce légal ?",
@@ -22,27 +21,27 @@
     },
     "q4": {
       "q": "Qui est derrière le projet ?",
-      "a": "Actuellement, nous sommes 4 développeurs, 1 graphiste, 1 Community Manager, et 1 Modérateur derrière le projet."
+      "a": "Actuellement, nous sommes 5 développeurs, 1 graphiste, 1 Community Manager, et 1 Modérateur derrière le projet."
     },
     "q5": {
-      "q": "A quoi correspondent les différents rôles sur Discord ?",
-      "a": "- Démons : les membres importants et fondateurs du projet, ils ont accès au code.<br />- Kardmasters : les personnes assistant au développement et les autres membres de l'équipe.<br />- Minutes: des personnes externes à l'équipe Arena Returns mais qui ont participé au projet en développant divers outils.<br />- Coach : les membres."
+      "q": "Quel est l'état actuel du projet ?",
+      "a": "Le projet est en <strong>développement</strong>. Ça veut dire que pour l'instant, le jeu n'est pas prêt."
     },
     "q6": {
+      "q": "J'ai entendu parler d'alphas, c'est quand ?",
+      "a": "Il y a déjà eu deux alphas du projet Arena Returns. Ces alphas nous ont permis de vérifier que les bases de notre code étaient assez solides et efficaces pour gérer tous les joueurs présents. Ces alphas nous permettent aussi de présenter à la communauté les nouvelles fonctionalités implémentées.<br />Nous annonçons les alphas au plus tôt, très souvent plus d'une semaine avant le début de l'alpha.<br />Pour l'instant, nous n'avons pas assez avancé sur le jeu pour vous proposer une nouvelle alpha."
+    },
+    "q7": {
       "q": "Une date de sortie ? Une beta prévue ?",
       "a": "Nous n'avons aucune estimation à vous donner pour le moment, cela reste un projet d'envergure étant donné que le client de jeu est chiffré et que le jeu utilise des formats de fichier propriétaires qui demandent un certain travail d'exploitation afin d'écrire les outils permettant de les déchiffrer.<br />Quand le moment sera venu ou quand nous aurons besoin de joueurs pour faire des essais, nous vous tiendrons au courant."
     },
-    "q7": {
-      "q": "Je suis Youtuber/Streamer/Influenceur et j'aimerai parler du projet",
-      "a": "Super initiative ! Nous vous invitons à contacter un Démon par MP sur Discord :)"
-    },
     "q8": {
-      "q": "Comment participer et aider au développement du serveur?",
-      "a": "C'est une question qui revient très souvent, et la réponse est relativement simple:<br />- Parlez-en autour de vous, aux gens intéressés.<br />- Faites attention à ne pas \"sur-vendre\" le projet. Le serveur ne sera pas en ligne demain, ni même dans 1 ou 2 mois. C'est un travail sur le long terme, et nous ne voulons pas que les nouveaux arrivants soient déçus en voyant que le projet n'est pas sur le point d'être lancé.<br /><br />Certains l'ont peut-être remarqué, mais nous la ligne \"aidez-nous à développer le code du serveur\" n'est pas présente ci-dessus. On nous a déjà demandé à plusieurs reprises comment nous aider sur le code, et pour l'instant la réponse est malheureusement \"vous ne pouvez pas\".<br />La raison principale à ça est que le jeu Dofus-Arena (ou Arena Confrontation) est très lié à la communauté de Dofus. Les développeurs du projet Arena Returns interagissent avec la communauté de l'émulation Dofus depuis plusieurs années et une chose est relativement claire: si, un jour, un code même incomplet du serveur Arena venait à fuiter publiquement, nous verrions une armée de leecheur récupérer ce code et essayer de le monétiser autant que possible, ce qui pose plusieurs problèmes:<br />- L'équipe n'a pas envie de voir des gens peu scrupuleux profiter des centaines (milliers?) d'heures qui auront été nécessaire au développement du serveur.<br />- Notre but est de proposer un serveur Arena Confrontation gratuit et ouvert, pour les joueurs nostalgiques (dont nous faisons partie), afin de pouvoir rejouer à ce jeu qui nous a tant marqué.<br />- L'apparition de serveurs monétisés pourrait donner une raison à Ankama de nous demander de stopper le projet.<br /><br />La seule solution que nous avons trouvé pour éviter les points ci-dessus est de ne partager le code qu'avec des personnes de confiance, d'où notre difficulté à intégrer de nouveaux développeurs dans l'équipe.<br /><br />Si nous trouvons une autre solution un jour, nous vous en feront bien entendu part !"
+      "q": "Comment participer et aider au développement du serveur ?",
+      "a": "C'est une question qui revient très souvent, et la réponse est relativement simple :<br />- Parlez-en autour de vous, aux gens intéressés.<br />- Faites attention à ne pas \"sur-vendre\" le projet. Le serveur ne sera pas en ligne demain, ni même dans 1 ou 2 mois. C'est un travail sur le long terme, et nous ne voulons pas que les nouveaux arrivants soient déçus en voyant que le projet n'est pas sur le point d'être lancé.<br /><br />Certains l'ont peut-être remarqué, mais nous la ligne \"aidez-nous à développer le code du serveur\" n'est pas présente ci-dessus. On nous a déjà demandé à plusieurs reprises comment nous aider sur le code, et pour l'instant la réponse est malheureusement \"vous ne pouvez pas\".<br />La raison principale à ça est que le jeu Dofus-Arena (ou Arena Confrontation) est très lié à la communauté de Dofus. Les développeurs du projet Arena Returns interagissent avec la communauté de l'émulation Dofus depuis plusieurs années et une chose est relativement claire : si, un jour, un code même incomplet du serveur Arena venait à fuiter publiquement, nous verrions une armée de leecheur récupérer ce code et essayer de le monétiser autant que possible, ce qui pose plusieurs problèmes :<br />- L'équipe n'a pas envie de voir des gens peu scrupuleux profiter des centaines (milliers ?) d'heures qui auront été nécessaire au développement du serveur.<br />- Notre but est de proposer un serveur Arena Confrontation gratuit et ouvert, pour les joueurs nostalgiques (dont nous faisons partie), afin de pouvoir rejouer à ce jeu qui nous a tant marqué.<br />- L'apparition de serveurs monétisés pourrait donner une raison à Ankama de nous demander de stopper le projet.<br />La seule solution que nous avons trouvé pour éviter les points ci-dessus est de ne partager le code du serveur qu'avec des personnes de confiance, d'où notre difficulté à intégrer de nouveaux développeurs dans l'équipe.<br /><br /><strong>Néanmoins</strong>, vous pouvez nous aider sur tous nos projets open-source, en trouvant des bugs ou en proposant des améliorations. Vous trouverez tous nos projets open-source sur GitHub : https://github.com/ArenaReturns"
     },
     "q9": {
-      "q": "J'ai entendu parler d'une alpha, c'est bon je peux taper du combattant dans l'arène? Comment je fais?",
-      "a": "J'ai entendu parler d'une alpha, c'est bon je peux taper du combattant dans l'arène? Comment je fais?<br />Il y a effectivement eu 2 alphas qui nous ont permis de tester le code du serveur et de vérifier qu'il supportait la charge de plusieurs dizaines de joueurs en simultané. Malheureusement, ces alphas sont finies et le serveur est de nouveau fermé jusqu'à nouvel ordre. De plus, les combats ne sont pas encore implémentés dans le serveur.<br />Mais... Je vois pourtant des vidéos YouTube de gens en train de combattre, moi aussi je veux taper...<br />Il y a effectivement un moyen de combattre MAIS:<br /><br />1. C'est un logiciel développé entièrement par un fan extérieur à l'équipe Arena Returns.<br />2. Jusqu'ici le logiciel est toléré par l'équipe Arena Returns, mais nous ne vérifions pas sa sécurité. Vous installez ce logiciel à vos risques et périls.<br /><br />Vous pourrez trouver les informations concernant ce logiciel ici. Si vous voulez jouer contre quelqu'un d'autre en qui vous avez confiance, vous pouvez suivre le tutoriel ici. La dernière version du logiciel est téléchargeable sur ce lien. Finalement, si vous avez des questions, rendez-vous sur le discord !"
+      "q": "Une alpha ? Des combats ? Où ??!!",
+      "a": "J'ai entendu parler d'une alpha, c'est bon je peux taper du combattant dans l'arène ? Comment je fais ?<br />Il y a effectivement eu 2 alphas qui nous ont permis de tester le code du serveur et de vérifier qu'il supportait la charge de plusieurs dizaines de joueurs en simultané. Malheureusement, ces alphas sont finies et le serveur est de nouveau fermé jusqu'à nouvel ordre. De plus, les combats ne sont pas encore implémentés dans le serveur.<br />Mais... Je vois pourtant des vidéos YouTube de gens en train de combattre, moi aussi je veux taper...<br />Il y a effectivement un moyen de combattre MAIS :<br /><br />1. C'est un logiciel développé entièrement par un fan extérieur à l'équipe Arena Returns.<br />2. Jusqu'ici le logiciel est toléré par l'équipe Arena Returns, mais nous ne vérifions pas sa sécurité. Vous installez ce logiciel à vos risques et périls.<br /><br />Vous pourrez trouver les informations concernant ce logiciel sur Discord. Si vous voulez jouer contre quelqu'un d'autre en qui vous avez confiance, vous pouvez suivre le tutoriel disponible. La dernière version du logiciel est téléchargeable sur Discord. Finalement, si vous avez des questions, rendez-vous sur Discord."
     }
   }
 }

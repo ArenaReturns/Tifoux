@@ -73,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         </div>
         <div className="hidden lg:flex lg:gap-x-20 lg:justify-around lg:flex-1">
           {navigationLeft.map((item) => (
-              <React.Fragment key={item.name}>
+            <React.Fragment key={item.name}>
               <Link
                 href={item.href}
                 className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
@@ -94,15 +94,15 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <div className="hidden lg:flex lg:gap-x-20 justify-around flex-1">
           {navigationRight.map((item) => (
             <React.Fragment key={item.name}>
-                <Link
-                    href={item.href}
-                    className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
-                    target={item.isExternal ? "_blank" : "_self"}
-                    rel={item.isExternal ? "noopener noreferrer" : undefined}
-                >
-                  {t(item.name)}
-                </Link>
-              </React.Fragment>
+              <Link
+                href={item.href}
+                className={`${rocknRollFont.className} text-sm font-normal leading-6 text-yellow-50 hover:text-yellow-500 duration-500 transition-colors`}
+                target={item.isExternal ? "_blank" : "_self"}
+                rel={item.isExternal ? "noopener noreferrer" : undefined}
+              >
+                {t(item.name)}
+              </Link>
+            </React.Fragment>
           ))}
         </div>
         <div className="lg:block hidden absolute top-3 right-0 z-50">
