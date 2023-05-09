@@ -107,7 +107,10 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         </div>
         <div className="lg:block hidden absolute top-3 right-0 z-50">
           <Popover className="fixed right-3">
-            <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50">
+            <Popover.Button
+              aria-label={t("navbar.language") ?? "Language"}
+              className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50"
+            >
               {lang.map((item) => (
                 <span key={item.name} className={`fi fi-${item.flag}`} />
               ))}

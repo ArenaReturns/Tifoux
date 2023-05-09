@@ -1,5 +1,6 @@
 {
   "navbar": {
+    "language": "Langue",
     "mobile": {
       "open": "Menu",
       "close": "Fermer"
