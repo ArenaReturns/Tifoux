@@ -56,13 +56,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <Image
-              className="mt-6 md:mt-0 rounded-lg border border-[#BEA979]"
-              src="/assets/illus-arena-returns-in-game.png"
-              alt=""
-              width={464}
-              height={374}
-            />
+            <Image className="mt-6 md:mt-0 rounded-lg border border-[#BEA979]" src="/assets/ingame-1.png" alt="" width={464} height={374} />
           </div>
           <div className="flex flex-col md:flex-row h-full items-center justify-between px-6 lg:px-8 py-12 bg-gradient-to-l from-[#664C32] to-[#755938]">
             <Image className="mb-6 md:mb-0 rounded-lg border border-[#BEA979]" src="/assets/illus-arena.png" alt="" width={464} height={374} />
