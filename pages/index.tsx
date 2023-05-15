@@ -7,6 +7,8 @@ import { Header } from "@/components/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Trans, useTranslation } from "next-i18next";
 import { copperplateFont, interFont, rocknRollFont } from "@/utils/fonts";
+import illusArenaImg from "@/public/assets/illus-arena.png";
+import ingame1Img from "@/public/assets/ingame-1.png";
 
 export default function Home() {
   const { t } = useTranslation("index");
@@ -56,10 +58,10 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <Image className="mt-6 md:mt-0 rounded-lg border border-[#BEA979]" src="/assets/ingame-1.png" alt="" width={464} height={374} />
+            <Image className="mt-6 md:mt-0 rounded-lg border border-[#BEA979]" src={ingame1Img} alt="" />
           </div>
           <div className="flex flex-col md:flex-row h-full items-center justify-between px-6 lg:px-8 py-12 bg-gradient-to-l from-[#664C32] to-[#755938]">
-            <Image className="mb-6 md:mb-0 rounded-lg border border-[#BEA979]" src="/assets/illus-arena.png" alt="" width={464} height={374} />
+            <Image className="mb-6 md:mb-0 rounded-lg border border-[#BEA979]" src={illusArenaImg} alt="" />
             <div className="w-full md:w-1/2 max-w-[464px] md:max-w-none">
               <h1 className={`${copperplateFont.className} font-bold text-3xl sm:text-4xl`}>{t("playNow.title")}</h1>
               <p className="mt-6">

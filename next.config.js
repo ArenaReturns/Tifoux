@@ -9,6 +9,9 @@ const nextConfig = {
   publicRuntimeConfig: {
     version,
   },
+  images: {
+    minimumCacheTTL: 60,
+  },
 };
 
 module.exports = nextConfig;

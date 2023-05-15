@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { rocknRollFont } from "@/utils/fonts";
+import logoImg from "@/public/logo.png";
+import logoSquareImg from "@/public/logo-square.png";
 
 interface HeaderProps {}
 
@@ -60,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <div className="flex lg:hidden items-center justify-between w-full">
           <Link href="/">
             <span className="sr-only">Arena Returns</span>
-            <Image className="h-12 w-auto" src="/logo-square.png" alt="Arena Returns" width={200} height={200} />
+            <Image className="h-12 w-auto" src={logoSquareImg} alt="Arena Returns" />
           </Link>
           <button
             type="button"
@@ -88,7 +90,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <div className="hidden lg:flex lg:z-10 shrink-0">
           <Link href="/" className="lg:-my-16 lg:translate-y-6">
             <span className="sr-only">Arena Returns</span>
-            <Image className="h-8 lg:h-32 w-auto" src="/logo.png" alt="" width={202} height={128} />
+            <Image className="h-8 lg:h-32 w-auto" src={logoImg} alt="" />
           </Link>
         </div>
         <div className="hidden lg:flex lg:gap-x-20 justify-around flex-1">
@@ -148,7 +150,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <div className="flex items-center justify-between">
             <Link href="/">
               <span className="sr-only">Arena Returns</span>
-              <Image className="h-12 w-auto" src="/logo-square.png" alt="Arena Returns" width={200} height={200} />
+              <Image className="h-12 w-auto" src={logoSquareImg} alt="Arena Returns" />
             </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-100" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">{t("navbar.mobile.close")}</span>

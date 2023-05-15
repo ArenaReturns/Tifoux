@@ -7,6 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Trans, useTranslation } from "next-i18next";
 import { copperplateFont, interFont } from "@/utils/fonts";
 import dynamic from "next/dynamic";
+import illusArenaImg from "@/public/assets/illus-arena.png";
 
 export default function Download() {
   const { t } = useTranslation("download");
@@ -35,10 +36,8 @@ export default function Download() {
             </div>
             <Image
               className="mt-6 md:mt-0 rounded-lg border border-[#BEA979]"
-              src="/assets/illus-arena.png"
+              src={illusArenaImg}
               alt=""
-              width={464}
-              height={374}
             />
           </div>
         </div>
