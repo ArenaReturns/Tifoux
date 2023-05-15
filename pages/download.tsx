@@ -35,7 +35,7 @@ export default function Download() {
             </div>
             <Image
               className="mt-6 md:mt-0 rounded-lg border border-[#BEA979]"
-              src="/assets/illus-arena-returns-in-game.png"
+              src="/assets/illus-arena.png"
               alt=""
               width={464}
               height={374}
