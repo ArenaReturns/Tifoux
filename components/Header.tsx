@@ -60,7 +60,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         <div className="flex lg:hidden items-center justify-between w-full">
           <Link href="/">
             <span className="sr-only">Arena Returns</span>
-            <Image className="h-12 w-auto" src="/logo-square.png" alt="" width={202} height={128} />
+            <Image className="h-12 w-auto" src="/logo-square.png" alt="Arena Returns" width={200} height={200} />
           </Link>
           <button
             type="button"
@@ -148,7 +148,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
           <div className="flex items-center justify-between">
             <Link href="/">
               <span className="sr-only">Arena Returns</span>
-              <Image className="h-12 w-auto" src="/logo-square.png" alt="" width={202} height={128} />
+              <Image className="h-12 w-auto" src="/logo-square.png" alt="Arena Returns" width={200} height={200} />
             </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-gray-100" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">{t("navbar.mobile.close")}</span>
