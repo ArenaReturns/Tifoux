@@ -34,7 +34,7 @@ export default function Home() {
               <div className="mt-8 space-x-2 md:space-x-4 w-full">
                 <Link
                   className={`${rocknRollFont.className} max-w-[156px] items-center inline-flex border-2 border-[#372820] px-6 py-4 rounded-lg bg-gradient-to-t from-[#5865F2] via-[#5865F2] to-[#8791FF] hover:from-[#5865F2] hover:via-[#8791FF] hover:to-[#a0a8ff]`}
-                  href="https://discord.gg/arenareturns"
+                  href="https://discord.gg/arena-returns-934862812075917353"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

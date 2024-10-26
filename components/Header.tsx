@@ -17,7 +17,7 @@ const navigation = [
   { name: "navbar.links.faq", href: "/faq", isExternal: false },
   {
     name: "navbar.links.discord",
-    href: "https://discord.gg/arenareturns",
+    href: "https://discord.gg/arena-returns-934862812075917353",
     isExternal: true,
   },
   {
