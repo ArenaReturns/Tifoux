@@ -4,7 +4,7 @@ The Arena Returns website, powered by Next.js
 ## Prerequisites
 * Git
 * Visual Studio Code
-* Node 18 LTS
+* Node 20 LTS
 * Yarn
 
 ## Quick setup guide (Visual Studio Code)
