@@ -1,4 +1,4 @@
-import { copperplateFont } from "@/utils/fonts";
+import { copperplateFont } from "../utils/fonts";
 import Image from "next/image";
 import React from "react";
 import headerImg from "@/public/assets/header.png";

@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { rocknRollFont } from "@/utils/fonts";
+import { rocknRollFont } from "../utils/fonts";
 import { detect } from "detect-browser";
 
 type OSType = {

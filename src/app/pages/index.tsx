@@ -1,25 +1,24 @@
-import Head from "next/head";
 import Image from "next/image";
-import { Hero } from "@/components/Hero";
+import { Hero } from "../components/Hero";
 import Link from "next/link";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { Trans, useTranslation } from "next-i18next";
-import { copperplateFont, interFont, rocknRollFont } from "@/utils/fonts";
+import { copperplateFont, interFont, rocknRollFont } from "../utils/fonts";
 import illusArenaImg from "@/public/assets/illus-arena.png";
 import ingame1Img from "@/public/assets/ingame-1.png";
+import { Metadata } from "next";
 
+const { t } = useTranslation("index");
+
+export const metadata: Metadata = {
+  title: `Arena Returns - ${t("html.title")}`,
+  description: `Arena Returns - ${t("html.description")}`,
+}
+ 
 export default function Home() {
-  const { t } = useTranslation("index");
 
   return (
     <>
-      <Head>
-        <title>{`Arena Returns - ${t("html.title")}`}</title>
-        <meta name="description" content={`Arena Returns - ${t("html.description")}`} />
-      </Head>
-      <Header />
       <main className={`${interFont.className} container mx-auto max-w-5xl`}>
         <Hero title="Arena Returns">
           <p className="mt-6 max-w-lg text-xl text-gray-200 sm:max-w-3xl text-shadow shadow-black">{t("hero.description")}</p>
@@ -78,7 +77,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Footer />
       </main>
     </>
   );

@@ -1,11 +1,14 @@
 import React, { Fragment, useState } from "react";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Transition } from "@headlessui/react";
+import { Dialog, DialogPanel } from '@headlessui/react'
+import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, ChevronDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import { rocknRollFont } from "@/utils/fonts";
+import { rocknRollFont } from "../utils/fonts";
 import logoImg from "@/public/logo.png";
 import logoSquareImg from "@/public/logo-square.png";
 
@@ -109,7 +112,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
         </div>
         <div className="lg:block hidden absolute top-3 right-0 z-50">
           <Popover className="fixed right-3">
-            <Popover.Button
+            <PopoverButton
               aria-label={t("navbar.language") ?? "Language"}
               className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-yellow-50"
             >
@@ -117,7 +120,7 @@ export const Header: React.FC<HeaderProps> = ({}) => {
                 <span key={item.name} className={`fi fi-${item.flag}`} />
               ))}
               <ChevronDownIcon className="h-5 w-5 flex-none text-yellow-50" aria-hidden="true" />
-            </Popover.Button>
+            </PopoverButton>
 
             <Transition
               as={Fragment}
@@ -128,25 +131,25 @@ export const Header: React.FC<HeaderProps> = ({}) => {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute -left-12 top-full z-10 mt-3 w-56 rounded-xl bg-[#755938] p-2 shadow-lg ring-1 ring-amber-900/20">
+              <PopoverPanel className="absolute -left-12 top-full z-10 mt-3 w-56 rounded-xl bg-[#755938] p-2 shadow-lg ring-1 ring-amber-900/20">
                 {lang.map((item) => (
-                  <Popover.Button
+                  <PopoverButton
                     key={item.name}
                     as="span"
                     onClick={() => onToggleLanguageClick(item.locale)}
                     className="block rounded-lg py-2 px-3 text-sm font-semibold leading-6 text-yellow-50 hover:bg-amber-900/20 hover:cursor-pointer"
                   >
                     <span className={`fi fi-${item.flag}`} /> {item.name}
-                  </Popover.Button>
+                  </PopoverButton>
                 ))}
-              </Popover.Panel>
+              </PopoverPanel>
             </Transition>
           </Popover>
         </div>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-10" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#372820] px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-[#372820] px-4 py-4 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/">
               <span className="sr-only">Arena Returns</span>
@@ -175,32 +178,32 @@ export const Header: React.FC<HeaderProps> = ({}) => {
               <Disclosure as="div" className="-mx-3">
                 {({ open }) => (
                   <>
-                    <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-yellow-50 hover:bg-[#755938]">
+                    <DisclosureButton className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-yellow-50 hover:bg-[#755938]">
                       <span className="flex gap-x-2">
                         {lang.map((item) => (
                           <span key={item.name} className={`fi fi-${item.flag}`} />
                         ))}
                       </span>
                       <ChevronDownIcon className={classNames(open ? "rotate-180" : "", "h-5 w-5 flex-none")} aria-hidden="true" />
-                    </Disclosure.Button>
-                    <Disclosure.Panel className="mt-2 space-y-2">
+                    </DisclosureButton>
+                    <DisclosurePanel className="mt-2 space-y-2">
                       {lang.map((item) => (
-                        <Disclosure.Button
+                        <DisclosureButton
                           key={item.name}
                           as="span"
                           onClick={() => onToggleLanguageClick(item.locale)}
                           className="block rounded-lg py-2 pl-6 pr-3 text-sm font-normal leading-7 text-yellow-50 hover:bg-[#755938] hover:cursor-pointer"
                         >
                           <span className={`fi fi-${item.flag}`} /> {item.name}
-                        </Disclosure.Button>
+                        </DisclosureButton>
                       ))}
-                    </Disclosure.Panel>
+                    </DisclosurePanel>
                   </>
                 )}
               </Disclosure>
             </div>
           </div>
-        </Dialog.Panel>
+        </DialogPanel>
       </Dialog>
     </header>
   );
